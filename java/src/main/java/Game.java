@@ -26,19 +26,10 @@ public class Game {
     }
 
     public char Winner() {
+        Character winnerSymbol = _board.getWinnerForRawCompleted();
+        if (winnerSymbol != null) return winnerSymbol;
+
         // Feature envy on accede a _board.....Symbol
-        if (_board.isRowCompleted(0)) {
-            return _board.SymbolAt(0, 0);
-        }
-
-        if (_board.isRowCompleted(1)) {
-            return _board.SymbolAt(1, 0);
-        }
-
-        if (_board.isRowCompleted(2)) {
-            return _board.SymbolAt(2, 0);
-        }
-
         return Tile.SYMBOL_EMPTY;
     }
 

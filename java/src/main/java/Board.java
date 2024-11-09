@@ -58,4 +58,19 @@ public class Board
     boolean isRowCompleted(int x) {
         return isRowNotEmpty(x) && isRowFullWithTheSameSymbol(x);
     }
+
+    Character getWinnerForRawCompleted() {
+        if (isRowCompleted(0)) {
+            return SymbolAt(0, 0);
+        }
+
+        if (isRowCompleted(1)) {
+            return SymbolAt(1, 0);
+        }
+
+        if (isRowCompleted(2)) {
+            return SymbolAt(2, 0);
+        }
+        return null;
+    }
 }
