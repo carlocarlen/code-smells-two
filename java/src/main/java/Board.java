@@ -59,7 +59,7 @@ public class Board
         return isRowNotEmpty(x) && isRowFullWithTheSameSymbol(x);
     }
 
-    Character getWinnerForRawCompleted() {
+    Character getWinnerForAnyRowCompleted() {
         if (isRowCompleted(0)) {
             return SymbolAt(0, 0);
         }

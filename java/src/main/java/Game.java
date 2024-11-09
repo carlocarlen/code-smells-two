@@ -27,7 +27,7 @@ public class Game {
     }
 
     public char Winner() {
-        Character winnerSymbol = _board.getWinnerForRawCompleted();
+        Character winnerSymbol = _board.getWinnerForAnyRowCompleted();
         if (winnerSymbol != null) return winnerSymbol;
 
         // Feature envy on accede a _board.....Symbol
