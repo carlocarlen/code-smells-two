@@ -11,6 +11,7 @@ public class Board
         {
             for (int j = 0; j < 3; j++)
             {
+                // Feature envy
                 Tile tile = new Tile();
                 tile.X = i;
                 tile.Y = j;
@@ -20,6 +21,10 @@ public class Board
         }
     }
 
+
+    public char SymbolAt(int x, int y) {
+        return TileAt(x, y).Symbol;
+    }
     public Tile TileAt(int x, int y)
     {
         for (Tile t : _plays) {
@@ -32,6 +37,9 @@ public class Board
 
     public void AddTileAt(char symbol, int x, int y)
     {
+        Position position = new Position(x, y);
+        position.x();
+        position.y();
         Tile newTile = new Tile();
         newTile.X = x;
         newTile.Y = y;

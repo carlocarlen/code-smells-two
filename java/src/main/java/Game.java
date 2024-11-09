@@ -1,4 +1,5 @@
 public class Game {
+    // Symbol
     private char _lastSymbol = ' ';
     private Board _board = new Board();
 
@@ -25,7 +26,9 @@ public class Game {
     }
 
     public char Winner() {
+        // Feature envy on accede a _board.....Symbol
         //if the positions in first row are taken
+        // Message chain
         if (_board.TileAt(0, 0).Symbol != ' ' &&
                 _board.TileAt(0, 1).Symbol != ' ' &&
                 _board.TileAt(0, 2).Symbol != ' ') {
