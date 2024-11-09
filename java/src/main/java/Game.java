@@ -1,4 +1,5 @@
 public class Game {
+    public static final char FIRST_PLAYER_SYMBOL = Tile.SYMBOL_X;
     // Symbol
     private char _lastSymbol = Tile.SYMBOL_EMPTY;
     private Board _board = new Board();
@@ -7,7 +8,7 @@ public class Game {
         //if first move
         if (_lastSymbol == Tile.SYMBOL_EMPTY) {
             //if player is X
-            if (symbol == Tile.SYMBOL_O) {
+            if (symbol != FIRST_PLAYER_SYMBOL) {
                 throw new Exception("Invalid first player");
             }
         }
