@@ -24,10 +24,14 @@ public class Board
         }
     }
 
+    public boolean isNotSymbolEmpty(int x, int y) {
+        return SymbolAt(x, y) != Tile.SYMBOL_EMPTY;
+    }
 
     public char SymbolAt(int x, int y) {
         return TileAt(x, y).Symbol;
     }
+
     public Tile TileAt(int x, int y)
     {
         for (Tile t : _plays) {
