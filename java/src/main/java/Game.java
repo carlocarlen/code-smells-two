@@ -27,44 +27,20 @@ public class Game {
 
     public char Winner() {
         // Feature envy on accede a _board.....Symbol
-        //if the positions in first row are taken
-        // Message chain
-        if (_board.isNotSymbolEmpty(0, 0) && _board.isNotSymbolEmpty(0, 1) && _board.isNotSymbolEmpty(0, 2)) {
-            //if first row is full with same symbol
-            if (_board.TileAt(0, 0).Symbol ==
-                    _board.TileAt(0, 1).Symbol &&
-                    _board.TileAt(0, 2).Symbol == _board.TileAt(0, 1).Symbol) {
-                return _board.TileAt(0, 0).Symbol;
-            }
+        if (_board.isRowCompleted(0)) {
+            return _board.SymbolAt(0, 0);
         }
 
-        //if the positions in first row are taken
-        if (_board.isNotSymbolEmpty(1, 0) &&
-                _board.isNotSymbolEmpty(1, 1) &&
-                _board.isNotSymbolEmpty(1, 2)) {
-            //if middle row is full with same symbol
-            if (_board.TileAt(1, 0).Symbol ==
-                    _board.TileAt(1, 1).Symbol &&
-                    _board.TileAt(1, 2).Symbol ==
-                            _board.TileAt(1, 1).Symbol) {
-                return _board.TileAt(1, 0).Symbol;
-            }
+        if (_board.isRowCompleted(1)) {
+            return _board.SymbolAt(1, 0);
         }
 
-        //if the positions in first row are taken
-        if (_board.isNotSymbolEmpty(2, 0) &&
-                _board.isNotSymbolEmpty(2, 1) &&
-                _board.isNotSymbolEmpty(2, 2)) {
-            //if middle row is full with same symbol
-            if (_board.TileAt(2, 0).Symbol ==
-                    _board.TileAt(2, 1).Symbol &&
-                    _board.TileAt(2, 2).Symbol ==
-                            _board.TileAt(2, 1).Symbol) {
-                return _board.TileAt(2, 0).Symbol;
-            }
+        if (_board.isRowCompleted(2)) {
+            return _board.SymbolAt(2, 0);
         }
 
         return Tile.SYMBOL_EMPTY;
     }
+
 }
 

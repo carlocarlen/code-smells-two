@@ -46,4 +46,16 @@ public class Board
     {
         TileAt(x,y).Symbol = symbol;
     }
+
+    boolean isRowFullWithTheSameSymbol(int x) {
+        return TileAt(x, 0).Symbol == TileAt(x, 1).Symbol && TileAt(x, 2).Symbol == TileAt(x, 1).Symbol;
+    }
+
+    boolean isRowNotEmpty(int x) {
+        return isNotSymbolEmpty(x, 0) && isNotSymbolEmpty(x, 1) && isNotSymbolEmpty(x, 2);
+    }
+
+    boolean isRowCompleted(int x) {
+        return isRowNotEmpty(x) && isRowFullWithTheSameSymbol(x);
+    }
 }
